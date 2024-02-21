@@ -1,0 +1,21 @@
+.pro-catalog {
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.pro-catalog::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pro-catalog::-webkit-scrollbar-thumb {
+    background-color: #57816b90;
+    border-radius: 6px;
+}
+
+.pro-catalog::-webkit-scrollbar-track {
+    background: #eef1f191;
+}
+
+.pro-catalog::-webkit-scrollbar-thumb:hover {
+    background-color: #57816b;
+}
