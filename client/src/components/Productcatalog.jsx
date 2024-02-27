@@ -12,7 +12,7 @@ const Productcatalog = () => {
         <div className="pro-catalog">
             <Flex w={'75vw'}  wrap={'wrap'} gap={5} p={5}>
                 {products.map((product)=>(
-                    <ProductTile key={product.id} title={product.title} image={product.image} seller={product.seller}
+                    <ProductTile key={product.id} id={product.id} title={product.title} image={product.image} seller={product.seller}
                      price={product.price} rating={product.rating}/>
                 ))}
             </Flex>

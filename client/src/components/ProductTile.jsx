@@ -1,9 +1,14 @@
 import { Badge, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { FaPlus, FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ProductTile = (props) => {
+    const navigate = useNavigate()
+    const handleClick = ()=>{
+        navigate(`/${props.id}`);
+    }
     return (
-        <Flex position="relative" w={'16vw'} p={3} direction="column" gap={1} justifyContent="space-around" alignItems="center" borderRadius={10} boxShadow="md">
+        <Flex cursor={"pointer"} position="relative" w={'16vw'} p={3} direction="column" gap={1} justifyContent="space-around" alignItems="center" borderRadius={10} boxShadow="md" onClick={handleClick}>
             <Button _hover={{bgColor:"green.200"}} position="absolute" top={0} right={0} size="sm" bgColor="green.100" borderBottomLeftRadius={"50%"} borderBottomRightRadius={0} borderTopLeftRadius={0} >
                 <FaPlus size={15} color={"darkgreen"}/>
             </Button>
