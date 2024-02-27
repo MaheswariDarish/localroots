@@ -3,20 +3,22 @@ import { useRef } from "react";
 import { FaChevronRight, FaHome, FaUser ,FaShoppingCart} from "react-icons/fa";
 import { MdSell } from "react-icons/md";
 import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, CloseButton } from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
+    const navigate=useNavigate()
     return (
         <Flex h={'100vh'} w={'20vw'} bgColor={'gray.50'} boxShadow={'lg'} flexDirection={'column'} p={4} gap={7} justifyContent={'space-between'}>
             <Flex flexDirection={'column'} gap={7}>
                 <Heading fontSize={'x-large'} color={'gray.800'}>LocalRoots.</Heading>
                 <Tabs variant='soft-rounded' flexDirection={'column'} display={'flex'}>
                     <TabList flexDirection="column" w={'18vw'} gap={2}>
-                        <Tab sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaHome />Home</Tab>
-                        <Tab sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaShoppingCart />Cart</Tab>
-                        <Tab sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><MdSell />Sell</Tab>
-                        <Tab sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaUser />Profile</Tab>
+                        <Tab as={Link} to="/" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaHome />Home</Tab>
+                        <Tab as={Link} to="/cart" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaShoppingCart />Cart</Tab>
+                        <Tab as={Link} to="/sell" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3} ><MdSell />Sell</Tab>
+                        <Tab as={Link} to="/profile" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaUser />Profile</Tab>
                     </TabList>
                 </Tabs>
             </Flex>

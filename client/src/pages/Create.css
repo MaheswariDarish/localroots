@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   outline: none;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 .create-main {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
