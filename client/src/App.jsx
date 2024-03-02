@@ -5,17 +5,23 @@ import Dashboard from './pages/Dashboard'
 import Register from './pages/Register'
 import './App.css'
 import Productdesc from './pages/Productdesc'
+import Layout from './Layout'
+import Create from './pages/Create'
+import Profile from './pages/Profile'
+import Cart from './pages/Cart'
 function App() {
   return (
     <>
-      <ChakraProvider>
-        <Routes>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/" element={<Dashboard/>}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/:id" element={<Productdesc/>}></Route>
-        </Routes> 
-      </ChakraProvider>
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/sell" element={<Create />} />
+          <Route path="/:id" element={<Productdesc />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
+      </Routes>
     </>
   )
 }

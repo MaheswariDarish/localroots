@@ -3,7 +3,7 @@ import { FaMinus, FaPlus, FaShoppingCart, FaStar } from "react-icons/fa";
 import { IoAddOutline, IoRemoveOutline } from 'react-icons/io5';
 const Productdesc = () => {
     return (
-        <Flex h={'80vh'} w={'70vw'} boxShadow={'md'}>
+        <Flex w={'80vw'} h={'100vh'}>
             <Flex w={'35vw'} alignItems={'center'} justifyContent={'center'}>
                 <Image src="src/assets/tomato-img.png" h={'200px'} />
             </Flex>

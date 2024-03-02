@@ -1,5 +1,5 @@
 // Create.js
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Create.css'; // Import your CSS file
 import createimg from "../assets/abc.jpg"
 
