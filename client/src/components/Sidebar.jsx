@@ -15,10 +15,10 @@ const Sidebar = () => {
                 <Heading fontSize={'x-large'} color={'gray.800'}>LocalRoots.</Heading>
                 <Tabs variant='soft-rounded' flexDirection={'column'} display={'flex'}>
                     <TabList flexDirection="column" w={'18vw'} gap={2}>
-                        <Tab as={Link} to="/" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaHome />Home</Tab>
-                        <Tab as={Link} to="/cart" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaShoppingCart />Cart</Tab>
-                        <Tab as={Link} to="/sell" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3} ><MdSell />Sell</Tab>
-                        <Tab as={Link} to="/profile" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaUser />Profile</Tab>
+                        <Tab as={Link} to="/dash" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaHome />Home</Tab>
+                        <Tab as={Link} to="/dash/cart" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaShoppingCart />Cart</Tab>
+                        <Tab as={Link} to="/dash/sell" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3} ><MdSell />Sell</Tab>
+                        <Tab as={Link} to="/dash/profile" sx={{ borderRadius: '10px', bgColor: '#fffff', _selected: { bgColor: '#57816b', color: 'white' } }} display={'flex'} justifyContent={'start'} gap={3}><FaUser />Profile</Tab>
                     </TabList>
                 </Tabs>
             </Flex>
